@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css">
+   <!-- Librerias jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+    crossorigin="anonymous"></script>  
+   <script src="https://johnny.github.io/jquery-sortable/js/jquery-sortable.js"></script> 
+   <script src="js/itinerario.js"></script>
+   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+</body>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCC-Y2glywFf6G8L10MWrAUiXQvGIF8_zA",
+        authDomain: "schnellecke-danone.firebaseapp.com",
+        databaseURL: "https://schnellecke-danone.firebaseio.com",
+        projectId: "schnellecke-danone",
+        storageBucket: "schnellecke-danone.appspot.com",
+        messagingSenderId: "592904824119",
+        appId: "1:592904824119:web:133d2f6c9be278cb7aa6b2"
+      };
+      // Initialize Firebase
+      var proy=firebase.initializeApp(firebaseConfig);
+          console.log(proy.name);
+      // Get a reference to the database service
+      var database = firebase.database();        
+    </script>
+</head>
+<body>
+   
+  <div class="app">
+		<header>
+			<h1>DRAG n DROP</h1>
+    </header>
+		<div class="lists" >
+			<div class="list" id="lista1">
+				<div class="list-item" draggable="true" >List item 1</div>
+				<div class="list-item" draggable="true">List item 2</div>
+        <div class="list-item" draggable="true">List item 3</div>
+        <div class="list-item" draggable="true">List item 4</div>
+			</div>
+      <div class="list7" id="lista5">
+        <ol id="lista2" class="nested_with_switch vertical">
+          <li>Embarques:</li>
+          <li>Embarques:</li>
+          <li>Embarques:</li>
+          <li>Embarques:</li>
+          <li>Embarques:</li> 
+        </ol>        
+      </div>
+
+      <div class="list" id="lista3">
+        <ol class="nested_with_switch vertical"></ol>
+      </div>
+
+      <div class="list" id="lista2">
+        <ol class="nested_with_switch vertical">
+          <li>
+            Item 1
+          </li>
+          
+          <li>
+            Item 3
+          </li><li class="">Item 3.1</li>
+          <li>
+            Item 4
+            <ol class="">
+              
+              
+              <li>Item 3.3</li>
+              <li>Item 3.4</li>
+              <li>Item 3.5</li>
+              <li>Item 3.6</li>
+            </ol>
+          </li>
+          <li>
+            Item 5
+          </li>
+          <li>
+            Item 6
+          </li>
+        </ol>
+      </div>
+     
+	  </div>
+
+
+
+    <pre id="objeto">
+
+    </pre>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="js/app.js"></script> 
+    <script src="js/main.js"></script>   
+  </div>
+</body>
+</html>
